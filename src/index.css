@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  /* TOKENS */
+  --color-green: #3c7d3c;
+  --color-gold: #e5a100;
+  --color-dark: #1a1a1a;
+  --radius-premium: 3rem;
+  --font-sans: "Manrope", sans-serif;
+}
+
+@layer components {
+  /* THE TYPOGRAPHY SYSTEM */
+  .type-title {
+    @apply text-5xl md:text-8xl font-black uppercase leading-[0.85] tracking-tighter;
+  }
+  .type-manifesto {
+    @apply text-xl md:text-3xl font-light italic border-l-2 border-gold pl-10 leading-snug;
+  }
+  .type-body {
+    @apply text-[15px] font-medium leading-relaxed opacity-90;
+  }
+  .type-tag {
+    @apply text-green text-[11px] font-bold tracking-[0.5em] uppercase;
+  }
+
+  /* THE LAYOUT SYSTEM */
+  .grid-about {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center;
+  }
+}
